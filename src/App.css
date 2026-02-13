@@ -1,0 +1,134 @@
+/* Container for the whole app */
+.front-page {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* --- InputFeild.tsx Styles --- */
+.inputForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inputBox {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+}
+
+.inputButton {
+  width: 100%;
+  padding: 12px;
+  /* Use 'background' for the gradient */
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* 1. Fix: Use 'background: none' and '!important' to kill the gradient */
+.inputButton:disabled {
+  background: #ccc !important;
+  color: #888 !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* 2. Fix: Only apply hover effects if the button is NOT disabled */
+.inputButton:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+}
+
+.inputButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+}
+
+/* --- GetWeatherDetailsUsingCity.tsx Styles --- */
+.weatherCard {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUp 0.6s ease-out;
+}
+
+.weatherCard h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.weatherCard h1 {
+  font-size: 4rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.weatherCard p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cityNotEnteredPara {
+  color: #ff4d4d;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+}
+
+.dateGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.dateInputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dateInputWrapper label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
