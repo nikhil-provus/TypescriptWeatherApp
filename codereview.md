@@ -254,7 +254,7 @@ Complex functions like `getLocationDetails` lack documentation.
 15. Add proper loading/error states with ARIA
 
 
-## Code Quality Score **5/10** - Functional but Flawed
+## Code Quality Score: **5/10** 
 
 ### Score Breakdown:
 
